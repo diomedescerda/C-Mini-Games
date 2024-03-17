@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include<ctype.h>
 
 
 main(){
@@ -9,7 +10,7 @@ main(){
     
     srand(time(NULL));
     n = rand() % (122 + 1 - 97) + 97;
-
+    printf("%c\n",n);
     printf(" ----------------------- \n|     MysteryLetter     |\n ----------------------- \n");
     printf("¡Bienvenido al juego de adivinar la letra! En este juego por turnos, \ntu objetivo es adivinar una letra al azar antes que tu oponente, la inteligencia artificial (AI).\n");
     printf("Cada turno, tendrás la oportunidad de adivinar la letra misteriosa. \nSi adivinas correctamente la letra, ¡ganarás el juego! ¡Buena suerte y que comience la diversión!\n\n");
@@ -23,10 +24,16 @@ main(){
 
     while (1)
     {
-        printf("Turno jugador 1 >");
+        printf("Turno jugador 1 \n");
+        
         do{
+            printf(">");
             jug1 = getchar();
-        } while (jug1 == '\n');
+            
+            if (jug1 >= 'A' && jug1 <= 'Z') 
+                jug1 = tolower(jug1);
+
+        } while (jug1 == '\n'  || (jug1<97 || jug1>122));
 
         if (jug1==n){
             printf("\n ------------------------------- \n|\t\tYOU WIN!\t|\n|\tCONGRATULATIONS!\t|\n ------------------------------- \nTHE GAME HAS ENDED!\n\n");
@@ -61,7 +68,7 @@ main(){
                 maq = rand() % (122 + 1 - 97) + 97;
         }
              
-        printf("Turno de la maquina > %c\n",maq);
+        printf("Turno de la maquina \n>> %c\n",maq);
        if (maq==n){
             printf("\n -----------------------\n|\tAI WIN\t\t|\n|\tGAME OVER\t|\n -----------------------\nTHE GAME HAS ENDED!\n\n");
             break;
