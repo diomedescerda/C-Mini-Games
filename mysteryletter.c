@@ -10,7 +10,7 @@ main(){
     
     srand(time(NULL));
     n = rand() % (122 + 1 - 97) + 97;
-    printf("%c\n",n);
+    
     printf(" ----------------------- \n|     MysteryLetter     |\n ----------------------- \n");
     printf("¡Bienvenido al juego de adivinar la letra! En este juego por turnos, \ntu objetivo es adivinar una letra al azar antes que tu oponente, la inteligencia artificial (AI).\n");
     printf("Cada turno, tendrás la oportunidad de adivinar la letra misteriosa. \nSi adivinas correctamente la letra, ¡ganarás el juego! ¡Buena suerte y que comience la diversión!\n\n");
