@@ -6,6 +6,6 @@ int setLevel();
 int setSeconds();
 void fillHints(int hints[]);
 int operation(char s[], int hints[]);
-void GUI();
+void CLI();
 
 #endif

@@ -5,7 +5,7 @@
 
 #define NHINTS 5
 
-void GUI(){
+void CLI(){
     int key, sec, op, hints[NHINTS];
     double elapsed = 0;
     char input[100];

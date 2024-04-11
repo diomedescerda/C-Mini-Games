@@ -2,7 +2,7 @@
 
 int main(){
   
-    GUI();
+    CLI();
 
     return 0;
 }
